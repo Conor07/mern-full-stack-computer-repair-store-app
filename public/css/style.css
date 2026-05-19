@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Diplomata&family=Share+Tech+Mono&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 14px;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #1e1e1e;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+}
