@@ -1,6 +1,6 @@
 import { logEvents } from "./logger.ts";
 
-const errorHandler = (err: any, req: any, res: any) => {
+const errorHandler = (err: any, req: any, res: any, next: any) => {
   logEvents(
     `${err.name}: ${err.message}\t${req.method}\t${req.url}\t${req.headers.origin}`,
     "errLog.log",
