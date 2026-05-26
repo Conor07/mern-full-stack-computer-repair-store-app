@@ -7,7 +7,11 @@ import User from "./User";
 type UsersListProps = {};
 
 const UsersList: React.FC<UsersListProps> = ({}) => {
-  const { isLoading, isSuccess, isError, error } = useGetUsersQuery(undefined);
+  const { isLoading, isSuccess, isError, error } = useGetUsersQuery(undefined, {
+    pollingInterval: 60000,
+    refetchOnFocus: true,
+    refetchOnReconnect: true,
+  });
 
   const users = useAppSelector(selectAllUsers);
 

@@ -7,7 +7,11 @@ import Note from "./Note";
 type NotesListProps = {};
 
 const NotesList: React.FC<NotesListProps> = ({}) => {
-  const { isLoading, isSuccess, isError, error } = useGetNotesQuery(undefined);
+  const { isLoading, isSuccess, isError, error } = useGetNotesQuery(undefined, {
+    pollingInterval: 15000,
+    refetchOnFocus: true,
+    refetchOnReconnect: true,
+  });
 
   const notes = useAppSelector(selectAllNotes);
 
